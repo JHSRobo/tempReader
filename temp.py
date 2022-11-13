@@ -7,8 +7,5 @@ from adafruit_ads1x15.analog_in import AnalogIn
 ads = ADS.ADS1015(i2c)
 chan = AnalogIn(ads, ADS.P0)
 # chan = AnalogIn(ads, ADS.P0, ADS.P1)  example with multiple pins being used
-print(chan.value, chan.voltage)
-
-# Test code
-# temp = (chan.voltage - 0.5) * 100
-# print(temp)
+temp = chan.voltage * 100
+print(temp)
